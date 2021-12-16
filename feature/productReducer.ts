@@ -16,7 +16,7 @@ const productSlice = createSlice({
   name: 'product',
   initialState,
   reducers: {
-    fetchProductList(state, action) {
+    fetchProductList(state) {
       state.loading = true;
     },
     fetchStudentListSuccess(state, action: PayloadAction<ListResponse<Product>>) {
@@ -41,3 +41,22 @@ export const selectStudenLoading = (state: RootState) => state.product.loading;
 // Reducer
 const studentReducer = productSlice.reducer;
 export default studentReducer;
+
+//const user={
+// name, password, address,age
+//}
+
+/// dispatch({
+//    type : `${productActions.getUserList}`,
+//    payload : user
+//})
+//
+//
+//
+//
+//// function* fetchUser (action:PayloadActions){
+//  const {user} = action.payload
+//}
+//
+//
+//

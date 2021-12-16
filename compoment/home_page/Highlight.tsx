@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { openFile } from '../../js'
 
 const Highlight = () => {
+  useEffect(()=>{
+    openFile(event)
+  },[])
     return (
         <>
             <div className="highlight">
@@ -45,6 +49,12 @@ const Highlight = () => {
     </div>
   </div>
 </div>
+
+<form action="">
+
+<input type="file"className="image"accept='image/*' onChange={(event)=>openFile(event)} />
+      <img src=""className="output"  alt=""id='output' />
+</form>
 
         </>
     )

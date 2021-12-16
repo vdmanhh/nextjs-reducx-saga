@@ -3,7 +3,9 @@ import {productActions} from '../feature/productReducer'
 import { call, debounce, put, takeLatest } from 'redux-saga/effects';
 import {Product,ListResponse} from '../model/Product'
 import {fetchProduct} from '../pages/api/fetchProduct'
-function* fetchProdutList() {
+function* fetchProdutList(action:PayloadAction) {
+ 
+    
     try {
         const response: ListResponse<Product> = yield call(fetchProduct);
         yield put(productActions.fetchStudentListSuccess(response));
@@ -14,6 +16,6 @@ function* fetchProdutList() {
   }
 export function* product (){
     yield takeLatest(productActions.fetchProductList, fetchProdutList);
-    console.log('aaa');
+ 
     
 }
