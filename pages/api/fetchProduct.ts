@@ -1,4 +1,3 @@
-import {Product,ListResponse} from '../../model/Product'
 import axios from 'axios';
 
 export function fetchProduct(){

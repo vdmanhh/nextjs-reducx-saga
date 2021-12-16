@@ -17,19 +17,16 @@ export default function Home({}) {
   useEffect(() => {  
     dispatch(productActions.fetchProductList())
   }, [dispatch])
-  console.log(data);
+ 
   
   return (
     <>
-    
         <Slide></Slide>
         <Highlight></Highlight>
         <Product data={data}></Product>
         <Collection></Collection>
         <Category></Category>
         <Blog></Blog>
-        
     </>
   )
 }
-//combineReducers

@@ -42,21 +42,3 @@ export const selectStudenLoading = (state: RootState) => state.product.loading;
 const studentReducer = productSlice.reducer;
 export default studentReducer;
 
-//const user={
-// name, password, address,age
-//}
-
-/// dispatch({
-//    type : `${productActions.getUserList}`,
-//    payload : user
-//})
-//
-//
-//
-//
-//// function* fetchUser (action:PayloadActions){
-//  const {user} = action.payload
-//}
-//
-//
-//
