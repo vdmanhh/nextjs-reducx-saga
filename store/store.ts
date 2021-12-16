@@ -5,9 +5,10 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 //import history from '../ultils/history'
 import productReducer from '../feature/productReducer'
 import { rootSaga } from './rootSaga';
+import studentReducer from '../feature/categoryReducer';
 const rootReducer = combineReducers({
    // router: connectRouter(history),
-//    counter: counterReducer,
+    category: studentReducer,
    product: productReducer,
   });
 const sagaMiddleware = createSagaMiddleware()

@@ -1,6 +1,6 @@
 import { PayloadAction } from "@reduxjs/toolkit";
 import { productActions } from "../feature/productReducer";
-import { call, debounce, put, takeLatest } from "redux-saga/effects";
+import { call, debounce, put,takeEvery, takeLatest } from "redux-saga/effects";
 import { Product, ListResponse } from "../model/Product";
 import { fetchProduct } from "../pages/api/fetchProduct";
 function* fetchProdutList(action: PayloadAction) {
@@ -13,5 +13,5 @@ function* fetchProdutList(action: PayloadAction) {
   }
 }
 export function* product() {
-  yield takeLatest(productActions.fetchProductList, fetchProdutList);
+  yield takeEvery(productActions.fetchProductList, fetchProdutList);
 }
